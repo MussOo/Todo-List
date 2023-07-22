@@ -1,0 +1,61 @@
+.item_todo {
+  width: 79%;
+  margin: 0 auto;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #155173;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  .container_todo_btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    .btn_todo_delete {
+      width: 5rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      background-color: #cc5959;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      filter: grayscale(10%) opacity(0.8);
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        filter: grayscale(0%) opacity(1);
+        background-color: #ec3939;
+      }
+    }
+
+    .btn_todo_edit {
+      width: 5rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      background-color: #59a1cc;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      filter: grayscale(10%) opacity(0.8);
+
+      &:hover {
+        filter: grayscale(0%) opacity(1);
+        background-color: #1e6ebf;
+      }
+    }
+  }
+}
