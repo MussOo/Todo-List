@@ -8,7 +8,7 @@ export default function useCreateTodo() {
   };
 
   const deleteTodo = (index) => {
-    Todolist.splice(index, 1);
+    var x = Todolist.splice(index, 1);
     setTodolist([...Todolist]);
   };
 
