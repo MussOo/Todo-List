@@ -1,12 +1,12 @@
 import React from 'react';
 import style from './TodoItem.module.scss';
 
-export default function TodoItem() {
+export default function TodoItem({ index, data, del, edit }) {
   return (
     <div className={style.item_todo}>
-      <span>TEST TODO 1</span>
+      <span>{data.title}</span>
       <div className={style.container_todo_btn}>
-        <a className={style.btn_todo_edit}>
+        <a className={style.btn_todo_edit} onClick={edit}>
           <img
             width='30'
             height='30'
@@ -14,7 +14,7 @@ export default function TodoItem() {
             alt='edit--v1'
           />
         </a>
-        <a className={style.btn_todo_delete}>
+        <a className={style.btn_todo_delete} onClick={del}>
           <img
             width='30'
             height='30'
