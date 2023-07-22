@@ -5,7 +5,7 @@ import useCreateTodo from '../../hooks/useCreateTodo';
 
 export default function TodoList() {
   const [containerTodos, setContainerTodos] = useState([]);
-  const { addTodo, Todolist, todo, setTodo, deleteTodo } = useCreateTodo();
+  const { addTodo, Todolist, todo, setTodo, deleteTodo, updateTodo } = useCreateTodo();
 
   useEffect(() => {
     var item = Todolist.map((item, key) => (
@@ -16,8 +16,8 @@ export default function TodoList() {
         del={() => {
           deleteTodo(key);
         }}
-        edit={() => {
-          console.log(key);
+        edit={(e) => {
+          updateTodo(key, e);
         }}
       />
     ));

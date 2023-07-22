@@ -4,12 +4,16 @@ export default function useCreateTodo() {
   const [Todolist, setTodolist] = useState([]);
 
   const addTodo = (todo) => {
-    console.log(todo, Todolist.length);
     setTodolist([...Todolist, { title: todo, key: Todolist.length }]);
   };
 
   const deleteTodo = (index) => {
     Todolist.splice(index, 1);
+    setTodolist([...Todolist]);
+  };
+
+  const updateTodo = (index, todo) => {
+    Todolist[index] = todo;
     setTodolist([...Todolist]);
   };
 
@@ -19,5 +23,6 @@ export default function useCreateTodo() {
     todo,
     setTodo,
     deleteTodo,
+    updateTodo,
   };
 }
